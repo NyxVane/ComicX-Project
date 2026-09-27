@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ComicX.Auth/ComicX.Auth.csproj" />
+  <Project Path="ComicX.Console/ComicX.Console.csproj" />
+  <Project Path="ComicX.Menu/ComicX.Menu.csproj" />
+</Solution>
