@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="ComicX.Auth/ComicX.Auth.csproj" />
-  <Project Path="ComicX.Console/ComicX.Console.csproj" />
-  <Project Path="ComicX.Menu/ComicX.Menu.csproj" />
+  <Project Path="ComicX.Auth/ComicX.Auth.csproj" Id="fb142d8b-0231-435f-ae52-423e7ac2a344" />
+  <Project Path="ComicX.Console/ComicX.ConsoleApp.csproj" Id="3e199e21-61ff-4731-b93c-740f4568572f" />
+  <Project Path="ComicX.Menu/ComicX.Menu.csproj" Id="13b93f28-933d-475e-b5aa-89309407771f" />
 </Solution>
