@@ -1,0 +1,5 @@
+Batman,2000,22
+Joker,1800,13
+Cat,1500,11
+TheRiddler,1200,15
+Pinguin,1000,19
