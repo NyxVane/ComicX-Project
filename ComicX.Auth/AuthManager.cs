@@ -1,60 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.IO;
 
 namespace ComicX.Auth
 {
     public class AuthManager
     {
-        public static bool Login()
+        private static string userFilePath = "users.txt";
+        private static string lockoutFilePath = "lockout.txt";
+
+        public static void InitializeUsersFile()
         {
-            string filePath = "users.txt";
-
-            if (!File.Exists(filePath))
+            if (!File.Exists(userFilePath))
             {
-                File.WriteAllText(filePath, "admin,1234\n");
+                File.WriteAllText(userFilePath, "admin,1234\n");
             }
+        }
 
-            int attempts = 3;
+        public static bool IsLockedOut(out TimeSpan remainingTime)
+        {
+            remainingTime = TimeSpan.Zero;
 
-            while (attempts > 0)
+            if (File.Exists(lockoutFilePath))
             {
-                Console.Write("Please provide username to access the ComicX system: ");
-                string username = Console.ReadLine();
-                Console.Write("Please provide password: ");
-                string password = Console.ReadLine();
-
-                string[] lines = File.ReadAllLines(filePath);
-                bool isAuthenticated = false;
-
-                foreach (string line in lines)
+                string lockoutTimeStr = File.ReadAllText(lockoutFilePath);
+                if (DateTime.TryParse(lockoutTimeStr, out DateTime lockoutExpiration))
                 {
-                    string[] parts = line.Split(',');
-
-                    if (parts.Length>= 2 && parts[0].Trim() == username && parts[1].Trim() == password)
+                    if (DateTime.Now < lockoutExpiration)
                     {
-                        isAuthenticated = true;
-                        break;
+                        remainingTime = lockoutExpiration - DateTime.Now;
+                        return true;
                     }
-                }
-
-                if (isAuthenticated)
-                {
-                    return true;
-                }
-                else
-                {
-                    attempts--;
-                    if (attempts > 0)
+                    else
                     {
-                        Console.WriteLine($"Wrong username and/or password. Remaining attempts: {attempts}\n");
+                        File.Delete(lockoutFilePath);
                     }
                 }
             }
-            Console.WriteLine("You are not authorized to access this service");
+            return false;
+        }
+
+        public static void SetLockout()
+        {
+            DateTime experationTime = DateTime.Now.AddMinutes(30);
+            File.WriteAllText(lockoutFilePath, experationTime.ToString());
+        }
+
+        public static bool ValidateCredentials(string username, string password)
+        {
+            InitializeUsersFile();
+
+            string[] lines = File.ReadAllLines(userFilePath);
+
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(',');
+
+                if (parts.Length >= 2 && parts[0].Trim() == username && parts[1].Trim() == password) return true;
+            }
+
             return false;
         }
     }
