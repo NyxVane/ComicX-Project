@@ -123,19 +123,30 @@ namespace ComicX.ConsoleApp
         private static void RegisterSaleUI()
         {
             Console.Clear();
-            Console.WriteLine("--- Register a Comic Book Sold ---");
+            Console.WriteLine("--- Register Comic Books Sold ---");
             Console.WriteLine("Available themes: Batman, Joker, Cat, TheRiddler, Pinguin");
-            Console.Write("Enter the theme name to sell one: ");
+            Console.Write("Enter the theme name: ");
             string theme = Console.ReadLine();
 
-            if (MenuManager.OneBookSold(theme))
+            Console.Write("Enter quantity to sell: ");
+            if (int.TryParse(Console.ReadLine(), out int quantity) && quantity > 0)
             {
-                Console.WriteLine($"\nSale registered seccessfully for {theme}!");
-            } else
-            {
-                Console.WriteLine("\nPress any key to return to menu...");
-                Console.ReadKey();
+                if (MenuManager.RegisterSale(theme, quantity))
+                {
+                    Console.WriteLine($"\nSale registered successfully! Sold {quantity} pcs of {theme}.");
+                }
+                else
+                {
+                    Console.WriteLine("\nError: Invalid theme name or not enough stock!");
+                }
             }
+            else
+            {
+                Console.WriteLine("\nInvalid quantity entered!");
+            }
+
+            Console.WriteLine("\nPress any key to return to menu...");
+            Console.ReadKey();
         }
 
         private static void ShowStockStatusUI()

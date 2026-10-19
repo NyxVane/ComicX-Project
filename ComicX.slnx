@@ -2,4 +2,5 @@
   <Project Path="ComicX.Auth/ComicX.Auth.csproj" Id="fb142d8b-0231-435f-ae52-423e7ac2a344" />
   <Project Path="ComicX.Console/ComicX.ConsoleApp.csproj" Id="3e199e21-61ff-4731-b93c-740f4568572f" />
   <Project Path="ComicX.Menu/ComicX.Menu.csproj" Id="13b93f28-933d-475e-b5aa-89309407771f" />
+  <Project Path="ComicX.WpfApp/ComicX.WpfApp.csproj" Id="332b75df-b2b5-42c2-8c84-c2b04adddcfc" />
 </Solution>

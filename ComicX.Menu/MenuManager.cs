@@ -17,17 +17,17 @@ namespace ComicX.Menu
             { "Pinguin", 19m }
         };
 
+        // Csak akkor hozza létre az alapértelmezett fájlt, ha még egyáltalán NEM létezik!
         public static void InitializeStockFile()
         {
             if (!File.Exists(stockFile))
             {
-                string[] defaultStock =
-                {
-                    "Batman,300",
-                    "Joker,300",
-                    "Cat,300",
-                    "TheRiddler,300",
-                    "Pinguin,300"
+                string[] defaultStock = {
+                    "Batman,1200",
+                    "Joker,3500",
+                    "Cat,865",
+                    "TheRiddler,412",
+                    "Pinguin,2000"
                 };
                 File.WriteAllLines(stockFile, defaultStock);
             }
@@ -72,8 +72,17 @@ namespace ComicX.Menu
             return values;
         }
 
+        // 1 db eladása (visszafelé kompatibilitás miatt)
         public static bool OneBookSold(string themeType)
         {
+            return RegisterSale(themeType, 1);
+        }
+
+        // Új metódus tetszőleges mennyiség eladására készletellenőrzéssel
+        public static bool RegisterSale(string themeType, int quantity)
+        {
+            if (quantity <= 0) return false;
+
             var stock = GetStock();
 
             string matchedKey = null;
@@ -86,9 +95,10 @@ namespace ComicX.Menu
                 }
             }
 
-            if (matchedKey != null && stock[matchedKey] > 0)
+            // Ellenőrizzük, hogy létezik-e a téma ÉS van-e elég készleten
+            if (matchedKey != null && stock[matchedKey] >= quantity)
             {
-                stock[matchedKey]--;
+                stock[matchedKey] -= quantity;
 
                 var lines = new List<string>();
                 foreach (var item in stock)
@@ -98,6 +108,7 @@ namespace ComicX.Menu
                 File.WriteAllLines(stockFile, lines);
                 return true;
             }
+
             return false;
         }
 
@@ -113,12 +124,16 @@ namespace ComicX.Menu
             if (totalStock < 1000)
             {
                 return $"veryLow ({totalStock} books)";
-            } else if (totalStock >= 1000 && totalStock <= 1500) {
+            }
+            else if (totalStock >= 1000 && totalStock <= 1500)
+            {
                 return $"Low ({totalStock} books)";
-            } else if (totalStock > 1500 && totalStock <= 5000)
+            }
+            else if (totalStock > 1500 && totalStock <= 5000)
             {
                 return $"Normal ({totalStock} books)";
-            } else
+            }
+            else
             {
                 return $"Over ({totalStock} books)";
             }

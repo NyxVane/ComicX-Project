@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E199E21-61FF-4731-B93C-740F4568572F}|ComicX.Console\\ComicX.ConsoleApp.csproj|C:\\Users\\NyxVane\\source\\repos\\ComicX\\comicx.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E199E21-61FF-4731-B93C-740F4568572F}|ComicX.Console\\ComicX.ConsoleApp.csproj|solutionrelative:comicx.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{13B93F28-933D-475E-B5AA-89309407771F}|ComicX.Menu\\ComicX.Menu.csproj|C:\\Users\\NyxVane\\source\\repos\\ComicX\\comicx.menu\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13B93F28-933D-475E-B5AA-89309407771F}|ComicX.Menu\\ComicX.Menu.csproj|solutionrelative:comicx.menu\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB142D8B-0231-435F-AE52-423E7AC2A344}|ComicX.Auth\\ComicX.Auth.csproj|c:\\users\\nyxvane\\source\\repos\\comicx\\comicx.auth\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{332B75DF-B2B5-42C2-8C84-C2B04ADDDCFC}|ComicX.WpfApp\\ComicX.WpfApp.csproj|c:\\users\\nyxvane\\source\\repos\\comicx\\comicx.wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332B75DF-B2B5-42C2-8C84-C2B04ADDDCFC}|ComicX.WpfApp\\ComicX.WpfApp.csproj|solutionrelative:comicx.wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E199E21-61FF-4731-B93C-740F4568572F}|ComicX.Console\\ComicX.ConsoleApp.csproj|c:\\users\\nyxvane\\source\\repos\\comicx\\comicx.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E199E21-61FF-4731-B93C-740F4568572F}|ComicX.Console\\ComicX.ConsoleApp.csproj|solutionrelative:comicx.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332B75DF-B2B5-42C2-8C84-C2B04ADDDCFC}|ComicX.WpfApp\\ComicX.WpfApp.csproj|c:\\users\\nyxvane\\source\\repos\\comicx\\comicx.wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{332B75DF-B2B5-42C2-8C84-C2B04ADDDCFC}|ComicX.WpfApp\\ComicX.WpfApp.csproj|solutionrelative:comicx.wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB142D8B-0231-435F-AE52-423E7AC2A344}|ComicX.Auth\\ComicX.Auth.csproj|C:\\Users\\NyxVane\\source\\repos\\ComicX\\comicx.auth\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB142D8B-0231-435F-AE52-423E7AC2A344}|ComicX.Auth\\ComicX.Auth.csproj|solutionrelative:comicx.auth\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,33 +46,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.WpfApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ComicX.WpfApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.WpfApp\\MainWindow.xaml",
+              "RelativeToolTip": "ComicX.WpfApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-19T11:01:50.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.WpfApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ComicX.WpfApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.WpfApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ComicX.WpfApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:01:50.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Menu\\MenuManager.cs",
               "RelativeDocumentMoniker": "ComicX.Menu\\MenuManager.cs",
-              "ToolTip": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Menu\\MenuManager.cs*",
-              "RelativeToolTip": "ComicX.Menu\\MenuManager.cs*",
-              "ViewState": "AgIAAHIAAAAAAAAAAAASwHsAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Menu\\MenuManager.cs",
+              "RelativeToolTip": "ComicX.Menu\\MenuManager.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T13:35:57.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Console\\Program.cs",
               "RelativeDocumentMoniker": "ComicX.Console\\Program.cs",
               "ToolTip": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Console\\Program.cs",
               "RelativeToolTip": "ComicX.Console\\Program.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwGAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwJUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T13:39:12.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "C:\\Users\\NyxVane\\source\\repos\\ComicX\\ComicX.Auth\\AuthManager.cs",
               "RelativeDocumentMoniker": "ComicX.Auth\\AuthManager.cs",
